@@ -4,7 +4,7 @@ from brownie import FundMe, MockV3Aggregator, network, config
 from scripts.helpful_scripts import get_account, deploy_mocks,LOCAL_BLOCKCHAIN_ENVIRONMENTS
 
 
-def deploy_simple_storage():
+def deploy_fund_me():
     print("Deploying simple storage..")
     account = get_account()
     print(f"account: {account}")
@@ -21,4 +21,4 @@ def deploy_simple_storage():
 
 
 def main():
-    deploy_simple_storage()
+    deploy_fund_me()
