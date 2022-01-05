@@ -1,7 +1,6 @@
 from brownie import FundMe, MockV3Aggregator, network, config
 
-
-from scripts.helpful_scripts import get_account, deploy_mocks,LOCAL_BLOCKCHAIN_ENVIRONMENTS
+from scripts.helpful_scripts import get_account, deploy_mocks, LOCAL_BLOCKCHAIN_ENVIRONMENTS
 
 
 def deploy_fund_me():
@@ -17,7 +16,8 @@ def deploy_fund_me():
         price_feed_address = mockV3Aggregator.address
     fund_me = FundMe.deploy(price_feed_address, {"from": account},
                             publish_source=config["networks"][network.show_active()].get("verify"))
-    print("Contract:", fund_me)
+    print(f"Contract deployed to {fund_me.address}")
+    return fund_me
 
 
 def main():
