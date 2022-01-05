@@ -9,6 +9,8 @@ def fund():
         deploy_fund_me()
     fund_me = FundMe[-1]
     account = get_account()
+    entrance_fee = fund_me.getEntranceFee()
+    print(f"entrance_fee: {entrance_fee}")
 
 
 def withdrawy():
