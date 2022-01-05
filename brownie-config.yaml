@@ -2,6 +2,7 @@ dotenv: .env
 wallets:
   from_key: ${PRIVATE_KEY}
 networks:
+  default: ganache-local
   development:
     verify: False
   ganache-local:
